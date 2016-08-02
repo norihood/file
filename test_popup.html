@@ -1,0 +1,16 @@
+ <form action="test_popup_submit" method="get" accept-charset="utf-8">
+ 	
+ Map: <INPUT TYPE="TEXT" NAME="maparea" SIZE=2 VALUE="">
+ <input type=button onClick='test();' 
+ value="Show Map">
+
+
+ </form>
+ <script type="text/javascript">
+ 	function test(){
+ 		targetitem = document.forms[0].maparea; 
+		 dataitem = window.open("sub_popup.html", "dataitem", "toolbar=no,menubar=no,scrollbars=yes"); 
+		 dataitem.targetitem = targetitem;
+		 console.log(dataitem.targetitem);
+ 	}
+ </script>
