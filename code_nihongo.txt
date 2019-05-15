@@ -1,0 +1,20 @@
+Bat tat han tu tren vnjpclub.com
+document.addEventListener("keypress", function(e) {
+ if (e.keyCode == 96 ) {
+  show_block();
+ } else if (e.keyCode == 49) {
+  show_vd();
+ }
+});
+
+function show_vd(){
+  var nghiavidu = document.getElementsByClassName('nghiavidu');
+  for (var i = 0; i < nghiavidu.length; i ++) {
+    var display = nghiavidu[i].style.display;
+    if (display == 'none') {
+      nghiavidu[i].style.display = 'block';
+    } else {
+      nghiavidu[i].style.display = 'none';
+    }
+  }
+}
